@@ -5,7 +5,7 @@ Summary:        OpenCORE Adaptive Multi Rate Narrowband and Wideband speech lib
 License:        ASL 2.0
 URL:            http://sourceforge.net/projects/opencore-amr/
 Source0:        http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
-Patch0:         opencore-amr-0.1.3-fix_pc.patch
+Patch0:         https://raw.githubusercontent.com/amidevous1/opencore-amr/refs/heads/main/opencore-amr-0.1.3-fix_pc.patch
 
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
@@ -27,7 +27,7 @@ developing applications that use %{name}.
 
 %prep
 %setup -q
-%patch0 -p1 -b .fix
+%patch -N 0 -p1 -b .fix
 mv opencore/README opencore/README.opencore
 
 
