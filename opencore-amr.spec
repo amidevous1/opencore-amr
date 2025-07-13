@@ -26,8 +26,9 @@ developing applications that use %{name}.
 
 
 %prep
-%setup -q
-%patch -N0 -p1 -b .fix
+#%setup -q
+#%patch -N0 -p1 -b .fix
+%autosetup -p1 -q
 mv opencore/README opencore/README.opencore
 
 
